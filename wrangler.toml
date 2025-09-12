@@ -12,4 +12,4 @@ bindings = [
 
 [[migrations]]
 tag = "v1" # A unique identifier for this migration
-new_classes = ["TaskRoom"]
+new_sqlite_classes = ["TaskRoom"]
