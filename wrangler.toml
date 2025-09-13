@@ -1,0 +1,15 @@
+name = "aiapi" # 你可以随意命名
+main = "worker.js"
+compatibility_date = "2025.9.12"
+
+# -- Durable Objects Configuration --
+# This section is crucial. It tells Cloudflare that your code exports a
+# Durable Object class named "TaskRoom".
+[durable_objects]
+bindings = [
+  { name = "TASK_ROOM", class_name = "TaskRoom" },
+]
+
+[[migrations]]
+tag = "v1" # A unique identifier for this migration
+new_sqlite_classes = ["TaskRoom"]
